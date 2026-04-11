@@ -1,0 +1,47 @@
+# HCDE 530 Week 2 Rules
+
+## Scope
+- **Human-readable project explanation:** `context.md` is the primary walkthrough (purpose, data, code map, run, troubleshooting). Update it when behavior or files change meaningfully.
+- Project files: `context.md`, `demo_word_count.py`, `demo_responses.csv`, `dashboard.html`.
+- Audience is beginner-friendly; prioritize clarity over cleverness.
+
+## Python (`demo_word_count.py`)
+- Keep code readable with descriptive variable names.
+- Use short comments for key blocks, not every line.
+- Preserve the simple flow:
+  - load CSV with `csv.DictReader`
+  - count words per response
+  - print row-by-row output
+  - print summary stats (total, shortest, longest, average)
+- Assume CSV schema: `participant_id`, `role`, `response`.
+
+## Dashboard (`dashboard.html`)
+- Keep it standalone (HTML + CSS + JS in one file) unless asked otherwise.
+- Keep visuals simple: summary stats, role breakdown, searchable/filterable table.
+- Keep displayed fields aligned with the CSV schema.
+
+## Run Commands
+- Run from this directory so relative paths work:
+  - `cd "hcde 530 week 2 project" && python3 demo_word_count.py`
+- Quote paths that contain spaces in terminal commands.
+
+## Git Hygiene
+- Never commit `.DS_Store`.
+- Check `git status` before commit; stage only intentional files.
+
+## Directory Structure (source of truth)
+```text
+hcde 530 week 2 project/
+├── .git/
+├── .gitignore
+├── .cursorrules
+├── context.md
+├── dashboard.html
+├── demo_responses.csv
+└── demo_word_count.py
+```
+
+## Maintenance
+- Keep this file concise and update it when project structure/workflow changes.
+- If any file/folder is added, removed, renamed, or moved, update the
+  "Directory Structure (source of truth)" section in the same change.

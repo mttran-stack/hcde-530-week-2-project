@@ -1,3 +1,4 @@
+# This script is a demo of how to count the number of words in a response using a CSV file.
 import csv
 
 
@@ -10,7 +11,7 @@ with open(filename, newline="", encoding="utf-8") as f:
     for row in reader:
         responses.append(row)
 
-
+# Define a function to count the number of words in a response
 def count_words(response):
     """Count the number of words in a response string.
 
@@ -20,12 +21,13 @@ def count_words(response):
     return len(response.split())
 
 
-# Count words in each response and print a row-by-row summary
+# Count words in each response and print a row-by-row summary so that we have readable output
 print(f"{'ID':<6} {'Role':<22} {'Words':<6} {'Response (first 60 chars)'}")
 print("-" * 75)
 
 word_counts = []
 
+# Loop/iterative structure so that we don't to repeat code for each row
 for row in responses:
     participant = row["participant_id"]
     role = row["role"]
