@@ -2,7 +2,7 @@
 
 ## Scope
 - **Human-readable project explanation:** `context.md` is the primary walkthrough (purpose, data, code map, run, troubleshooting). Update it when behavior or files change meaningfully.
-- Project files: `context.md`, `demo_word_count.py`, `demo_responses.csv`, `dashboard.html`.
+- Project files: `context.md`, `demo_word_count.py`, `demo_responses.csv`, `dashboard.html`, `app_reviews_word_count.py`, `week2.md`.
 - Audience is beginner-friendly; prioritize clarity over cleverness.
 
 ## Python (`demo_word_count.py`)
@@ -35,10 +35,12 @@ hcde 530 week 2 project/
 ├── .git/
 ├── .gitignore
 ├── .cursorrules
+├── app_reviews_word_count.py
 ├── context.md
 ├── dashboard.html
 ├── demo_responses.csv
-└── demo_word_count.py
+├── demo_word_count.py
+└── week2.md
 ```
 
 ## Maintenance
