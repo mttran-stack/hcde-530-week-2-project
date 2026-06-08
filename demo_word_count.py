@@ -1,10 +1,9 @@
-# Demo: measure open-ended response length from a CSV export (typical UX interview/survey format)
 import csv
 
-# Keep the filename in one place so a rename in the folder only needs one edit
+#Keeps filename in one place so a rename in the folder only needs one edit
 filename = "demo_responses.csv"
 responses = []
-# DictReader keys each row by column name — if the CSV column order changes, the script still works
+#DictReader keys each row by column name
 with open(filename, newline="", encoding="utf-8") as f:
     reader = csv.DictReader(f)
     for row in reader:
@@ -20,13 +19,13 @@ def count_words(response):
     return len(response.split())
 
 
-# Print column headers first so output scans like a table (ID, role, length) before the text preview
+#Prints column headers so output scans like a table (ID, role, length)
 print(f"{'ID':<6} {'Role':<22} {'Words':<6} {'Response (first 60 chars)'}")
 print("-" * 75)
-# Store counts while looping — summary stats (min, max, average) need the full list, not just printed rows
+#Stores counts while looping
 word_counts = []
 
-# Loop/iterative structure so that we don't have to repeat code for each row
+#Loop/iterative structure so that code does not have to be repeated for each row
 for row in responses:
     participant = row["participant_id"]
     role = row["role"]
@@ -35,7 +34,7 @@ for row in responses:
     count = count_words(response)
     word_counts.append(count)
 
-    # Truncate preview so long responses don't push ID and word count off the terminal line
+    #Doesn't show full preview so that long responses don't push ID and word count off the terminal line
     if len(response) > 60:
         preview = response[:60] + "..."
     else:
@@ -43,7 +42,7 @@ for row in responses:
 
     print(f"{participant:<6} {role:<22} {count:<6} {preview}")
 
-# Summary block answers a different question than the table: overall spread, not one row at a time
+#Summary block shows overall word count statistics for total responses, shortest, longest, and average.
 print()
 print("── Summary ─────────────────────────────────")
 print(f"  Total responses : {len(word_counts)}")
