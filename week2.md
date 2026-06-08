@@ -64,7 +64,7 @@ This ties to **UX research** because code can help **organize data**—whether *
 
 ## Artifacts / evidence
 
-- **Repository:** [github.com/mttran-stack/week-2-project-practice](https://github.com/mttran-stack/week-2-project-practice)
+- **Repository:** [github.com/mttran-stack/hcde-530-week-2-project](https://github.com/mttran-stack/hcde-530-week-2-project)
 - **Code:** `demo_word_count.py`, `app_reviews_word_count.py`, `demo_responses.csv`
 - **Documentation:** `context.md`, `week2.md`, `.cursorrules`
 - **Visualization:** `dashboard.html`
